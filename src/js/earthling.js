@@ -1,6 +1,6 @@
 export default class Earthling{
   constructor(birthday, gender){
-    this.birthday = birthday;
+    this.birthday = new Date(birthday);
     this.age = calculateAge(birthday);
     this.gender = gender;
     if(gender === "female"){
@@ -32,7 +32,18 @@ export default class Earthling{
   }
 
   nextBirthdayOnPlanet(planetObject){
-
+    const msPerDay = (1000 * 3600 * 24);
+    const birthday = this.birthday;
+    const earthDaysPerPlanetYear = planetObject.earthDaysPerYear;
+    const today = new Date(Date.now());
+    const ageOnPlanet = this.howOldOnPlanet(planetObject);
+    const ageOnPlanetMilliseconds = ageOnPlanet * earthDaysPerPlanetYear * msPerDay;
+    const lastPlanetBirthday = new Date(birthday.getTime() + ageOnPlanetMilliseconds);
+    const msSinceLastPlanetBirthday = today.getTime() - lastPlanetBirthday.getTime();
+    const daysSinceLastPlanetBirthday = Math.ceil(msSinceLastPlanetBirthday / msPerDay);
+    const msUntilNextPlanetBirthday = (earthDaysPerPlanetYear - daysSinceLastPlanetBirthday) * msPerDay;
+    const nextPlanetBirthday = new Date(today.getTime() + msUntilNextPlanetBirthday);
+    return nextPlanetBirthday;
   }
 }
 

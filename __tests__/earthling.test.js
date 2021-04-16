@@ -8,7 +8,7 @@ describe('Earthling constructor and methods', () =>{
   });
   
   it('should create an Earthling object with age, gender, and life expectancy attributes', () => {
-    expect(earthlingObject.birthday).toEqual("1995-07-09");
+    expect(earthlingObject.birthday).toEqual(new Date("1995-07-09"));
     expect(earthlingObject.gender).toEqual("female");
     expect(earthlingObject.age).toEqual(25);
     expect(earthlingObject.lifeExpectancy).toEqual(74);
@@ -34,13 +34,9 @@ describe('Earthling constructor and methods', () =>{
   });
 
   it('should return the next date of Earthling birthday on a planet', () => {
-    jest
-    .spyOn(global.Date, 'now')
-    .mockImplementationOnce(() =>
-      new Date(1618605210344).valueOf()
-    );
+    jest.spyOn(global.Date, 'now').mockImplementationOnce(() => new Date("2021-04-16").valueOf());
     const jupiter = new Planet("Jupiter", 4333);
     const nextBirthdayOnJupiter = earthlingObject.nextBirthdayOnPlanet(jupiter);
-    expect(nextBirthdayOnJupiter).toEqual("2032-12-03");
+    expect(nextBirthdayOnJupiter).toEqual(new Date("2031-02-09"));
   });
 });
