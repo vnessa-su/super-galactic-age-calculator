@@ -32,4 +32,10 @@ describe('Earthling constructor and methods', () =>{
     const howManyYearsLeftOnMars = earthlingObject.howManyYearsLeftOnPlanet(mars);
     expect(howManyYearsLeftOnMars).toEqual(-13);
   });
+
+  it('should return the next date of Earthling birthday on a planet', () => {
+    const jupiter = new Planet("Jupiter", 4333);
+    const nextBirthdayOnJupiter = earthlingObject.nextBirthdayOnPlanet(jupiter);
+    expect(nextBirthdayOnJupiter)
+  })
 });
