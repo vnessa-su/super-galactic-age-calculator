@@ -13,6 +13,10 @@ export default class Earthling{
   }
 
   howManyYearsLeftOnPlanet(planetObject){
-    
+    const daysInEarthYear = 365;
+    const earthDaysInPlanetYear = planetObject.earthDaysPerYear;
+    const yearsLeftOnEarth = this.lifeExpectancy - this.age;
+    const yearsLeftOnPlanet = Math.floor((daysInEarthYear / earthDaysInPlanetYear) * yearsLeftOnEarth);
+    return yearsLeftOnPlanet;
   }
 }
