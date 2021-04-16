@@ -5,18 +5,16 @@ export default class Earthling{
   }
 
   howOldOnPlanet(planetObject){
-    const daysInEarthYear = 365;
-    const earthDaysInPlanetYear = planetObject.earthDaysPerYear;
+    const earthYearsInPlanetYear = planetObject.earthYearsPerYear;
     const ageOnEarth = this.age;
-    const ageOnPlanet = Math.floor((daysInEarthYear / earthDaysInPlanetYear) * ageOnEarth);
+    const ageOnPlanet = Math.floor(earthYearsInPlanetYear * ageOnEarth);
     return ageOnPlanet;
   }
 
   howManyYearsLeftOnPlanet(planetObject){
-    const daysInEarthYear = 365;
-    const earthDaysInPlanetYear = planetObject.earthDaysPerYear;
+    const earthYearsInPlanetYear = planetObject.earthYearsPerYear;
     const yearsLeftOnEarth = this.lifeExpectancy - this.age;
-    const yearsLeftOnPlanet = Math.floor((daysInEarthYear / earthDaysInPlanetYear) * yearsLeftOnEarth);
+    const yearsLeftOnPlanet = Math.floor(earthYearsInPlanetYear * yearsLeftOnEarth);
     return yearsLeftOnPlanet;
   }
 }
