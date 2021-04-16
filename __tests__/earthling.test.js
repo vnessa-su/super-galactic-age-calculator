@@ -7,9 +7,10 @@ describe('Earthling constructor and methods', () =>{
     earthlingObject = new Earthling(25, "female");
   });
   
-  it('should create an Earthling object with age and default life expectancy attributes', () => {
-    expect(earthlingObject.age).toEqual(25);
+  it('should create an Earthling object with age, gender, and life expectancy attributes', () => {
+    expect(earthlingObject.birthday).toEqual("1986-07-09");
     expect(earthlingObject.gender).toEqual("female");
+    expect(earthlingObject.age).toEqual(34);
     expect(earthlingObject.lifeExpectancy).toEqual(74);
   });
 
@@ -22,13 +23,13 @@ describe('Earthling constructor and methods', () =>{
   it('should return how many years of life an Earthling has left on a planet based on life expectancy', () => {
     const venus = new Planet("Venus", 225);
     const howManyYearsLeftOnVenus = earthlingObject.howManyYearsLeftOnPlanet(venus);
-    expect(howManyYearsLeftOnVenus).toEqual(77);
+    expect(howManyYearsLeftOnVenus).toEqual(79);
   });
 
   it('should return a negative number of the number of years past life expectancy on a planet if Earthling is aged above life expectancy', () => {
     earthlingObject.age = 100;
     const mars = new Planet("Mars", 687);
     const howManyYearsLeftOnMars = earthlingObject.howManyYearsLeftOnPlanet(mars);
-    expect(howManyYearsLeftOnMars).toEqual(-14);
+    expect(howManyYearsLeftOnMars).toEqual(-13);
   });
 });
