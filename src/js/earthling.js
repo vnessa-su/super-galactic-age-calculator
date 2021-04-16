@@ -11,4 +11,8 @@ export default class Earthling{
     const ageOnPlanet = Math.floor((daysInEarthYear / earthDaysInPlanetYear) * ageOnEarth);
     return ageOnPlanet;
   }
+
+  howManyYearsLeftOnPlanet(planetObject){
+    
+  }
 }

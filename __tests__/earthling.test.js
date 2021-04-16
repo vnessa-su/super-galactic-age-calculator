@@ -17,4 +17,10 @@ describe('Earthling constructor and methods', () =>{
     const howOldOnMercury = earthlingObject.howOldOnPlanet(mercury);
     expect(howOldOnMercury).toEqual(103);
   });
+
+  it('should return how many years of life an Earthling has left on a planet based on life expectancy', () => {
+    const venus = new Planet("Venus", 225);
+    const howManyYearsLeftOnVenus = earthlingObject.howManyYearsLeftOnPlanet(venus);
+    expect(howManyYearsLeftOnVenus).toEqual(77);
+  });
 });
