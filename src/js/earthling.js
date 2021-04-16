@@ -13,19 +13,23 @@ export default class Earthling{
   }
 
   getEarthAge(){
-    
+    const birthDate = this.birthday;
+    const differenceFromTodayMilliseconds = Date.now() - birthDate.getTime();
+    const differenceAsDate = new Date(differenceFromTodayMilliseconds);
+    const age = Math.abs(differenceAsDate.getUTCFullYear() - 1970);
+    return age;
   }
 
   howOldOnPlanet(planetObject){
     const earthYearsInPlanetYear = planetObject.earthYearsPerYear;
-    const ageOnEarth = this.age;
+    const ageOnEarth = this.getEarthAge();
     const ageOnPlanet = Math.floor(earthYearsInPlanetYear * ageOnEarth);
     return ageOnPlanet;
   }
 
   howManyYearsLeftOnPlanet(planetObject){
     const earthYearsInPlanetYear = planetObject.earthYearsPerYear;
-    const yearsLeftOnEarth = this.lifeExpectancy - this.age;
+    const yearsLeftOnEarth = this.lifeExpectancy - this.getEarthAge();
     let yearsLeftOnPlanet = earthYearsInPlanetYear * yearsLeftOnEarth;
     if(yearsLeftOnPlanet < 0){
       yearsLeftOnPlanet = Math.ceil(yearsLeftOnPlanet);
@@ -52,9 +56,4 @@ export default class Earthling{
 }
 
 function calculateAge(birthday){
-  const birthDate = new Date(birthday);
-  const differenceFromTodayMilliseconds = Date.now() - birthDate.getTime();
-  const differenceAsDate = new Date(differenceFromTodayMilliseconds);
-  const age = Math.abs(differenceAsDate.getUTCFullYear() - 1970);
-  return age;
 }
