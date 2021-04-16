@@ -11,13 +11,17 @@ describe('Earthling constructor and methods', () =>{
   it('should create an Earthling object with age, gender, and life expectancy attributes', () => {
     expect(earthlingObject.birthday).toEqual(new Date("1995-07-09"));
     expect(earthlingObject.gender).toEqual("female");
-    expect(earthlingObject.lifeExpectancy).toEqual(74);
   });
 
-  it('should return the age of the Earthling', () => {
+  it('should return the age of the Earthling object', () => {
     const earthAge = earthlingObject.getEarthAge();
     expect(earthAge).toEqual(25);
   });
+
+  it('should return the life expectancy of the Earthling object', () => {
+    const lifeExpectancy = earthlingObject.getLifeExpectancy();
+    expect(lifeExpectancy).toEqual(74);
+  })
 
   it('should return how many years old an Earthling is on a given planet', () => {
     const mercury = new Planet("Mercury", 88);
