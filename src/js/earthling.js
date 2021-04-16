@@ -1,7 +1,14 @@
 export default class Earthling{
-  constructor(age){
+  constructor(age, gender){
     this.age = age;
-    this.lifeExpectancy = 73;
+    this.gender = gender;
+    if(gender === "female"){
+      this.lifeExpectancy = 74;
+    } else if (gender === "male"){
+      this.lifeExpectancy = 70;
+    } else {
+      this.lifeExpectancy = 73;
+    }
   }
 
   howOldOnPlanet(planetObject){

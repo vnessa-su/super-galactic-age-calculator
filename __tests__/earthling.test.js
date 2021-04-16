@@ -10,7 +10,7 @@ describe('Earthling constructor and methods', () =>{
   it('should create an Earthling object with age and default life expectancy attributes', () => {
     expect(earthlingObject.age).toEqual(25);
     expect(earthlingObject.gender).toEqual("female");
-    expect(earthlingObject.lifeExpectancy).toEqual(74));
+    expect(earthlingObject.lifeExpectancy).toEqual(74);
   });
 
   it('should return how many years old an Earthling is on a given planet', () => {
