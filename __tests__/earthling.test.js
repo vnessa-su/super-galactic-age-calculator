@@ -4,13 +4,13 @@ import Planet from './../src/js/planet.js';
 describe('Earthling constructor and methods', () =>{
   let earthlingObject;
   beforeEach(() => {
-    earthlingObject = new Earthling(25, "female");
+    earthlingObject = new Earthling("1995-07-09", "female");
   });
   
   it('should create an Earthling object with age, gender, and life expectancy attributes', () => {
-    expect(earthlingObject.birthday).toEqual("1986-07-09");
+    expect(earthlingObject.birthday).toEqual("1995-07-09");
     expect(earthlingObject.gender).toEqual("female");
-    expect(earthlingObject.age).toEqual(34);
+    expect(earthlingObject.age).toEqual(25);
     expect(earthlingObject.lifeExpectancy).toEqual(74);
   });
 

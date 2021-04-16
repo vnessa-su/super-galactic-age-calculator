@@ -1,6 +1,7 @@
 export default class Earthling{
-  constructor(age, gender){
-    this.age = age;
+  constructor(birthday, gender){
+    this.birthday = birthday;
+    this.age = calculateAge(birthday);
     this.gender = gender;
     if(gender === "female"){
       this.lifeExpectancy = 74;
@@ -29,4 +30,12 @@ export default class Earthling{
     }
     return yearsLeftOnPlanet;
   }
+}
+
+function calculateAge(birthday){
+  const birthDate = new Date(birthday);
+  const differenceFromTodayMilliseconds = Date.now() - birthDate.getTime();
+  const differenceAsDate = new Date(differenceFromTodayMilliseconds);
+  const age = Math.abs(differenceAsDate.getUTCFullYear() - 1970);
+  return age;
 }
