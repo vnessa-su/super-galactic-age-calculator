@@ -9,7 +9,6 @@ describe('Planet constructor and methods', () => {
   it('should create a Planet object with name, earthDaysPerYear, and earthYearsPerYear attributes', () => {
     expect(planetObject.name).toEqual("Mercury");
     expect(planetObject.earthDaysPerYear).toEqual(88);
-    expect(planetObject.earthYearsPerYear).toEqual(4.15);
   });
 
   it('should return the number of Earth years per year on the planet to two decimal points', () => {

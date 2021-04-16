@@ -26,14 +26,14 @@ export default class Earthling{
   }
 
   howOldOnPlanet(planetObject){
-    const earthYearsInPlanetYear = planetObject.earthYearsPerYear;
+    const earthYearsInPlanetYear = planetObject.getEarthYearsPerYear();
     const ageOnEarth = this.getEarthAge();
     const ageOnPlanet = Math.floor(earthYearsInPlanetYear * ageOnEarth);
     return ageOnPlanet;
   }
 
   howManyYearsLeftOnPlanet(planetObject){
-    const earthYearsInPlanetYear = planetObject.earthYearsPerYear;
+    const earthYearsInPlanetYear = planetObject.getEarthYearsPerYear();
     const yearsLeftOnEarth = this.getLifeExpectancy() - this.getEarthAge();
     let yearsLeftOnPlanet = earthYearsInPlanetYear * yearsLeftOnEarth;
     if(yearsLeftOnPlanet < 0){

@@ -1,18 +1,12 @@
-# _{Application Name}_
+# Super Galactic Age Calculator
 
-#### _{Brief description of application},{Date of current version}_
+#### Calculates the age, life expectancy, and next birthday of a user on different planets in the solar system.
 
-#### To see my live website go to {GH_PAGES_LINK_HERE}!
-
-#### By _**{List of contributors}**_
+#### By Vanessa Su
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
-
-## User Story
-
-* _{As a user I want to be able to...}_
+Based on the birthday and gender input by the user, their age and life expectancy are determined. Then based on the selection of planet, the app will return the current age of the user on that planet and the date of their next birthday on that planet. It will also return the estimated years left to live on that planet based on life expectancy on Earth or how many years above life expectancy they've lived if they have already exceeded their projected life expectancy.
 
 ## Technologies Used
 
@@ -29,15 +23,15 @@ _{This is a detailed description of your application. Give as much detail as nee
 * A text editor like [VS Code](https://code.visualstudio.com/)
 
 ### Installation
-1. Clone the repository: `$ git clone {PUT_REPO_HERE}`
-2. Navigate to the `{REPO_NAME}/` directory on your computer
+1. Clone the repository: `$ git clone https://github.com/vnessa-su/super-galactic-age-calculator.git`
+2. Navigate to the `/super-galactic-age-calculator` directory on your computer
 3. Open with your preferred text editor to view the code base
 4. To start a development server and view the project in the browser:
-    * Navigate to `{REPO_NAME}/` in your command line
+    * Navigate to `/super-galactic-age-calculator` in your command line
     * Run the command `npm install` to install dependencies
     * Optionally, run the commmand `npm run build` to make a bundle of the files
     * Finally, run the command `npm run start` to start a development server
-5. To run tests, navigate to `{REPO_NAME}/` in your terminal and run the command `npm run test`
+5. To run tests, navigate to `/super-galactic-age-calculator` in your terminal and run the command `npm run test`
 
 ## Known Bugs
 
@@ -49,6 +43,6 @@ For any questions or comments, please reach out through GitHub.
 
 ## License
 
-[License Name](document location)
+[MIT License](license)
 
-Copyright (c) [date] [names]
+Copyright (c) 2021 Vanessa Su
