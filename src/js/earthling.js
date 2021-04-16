@@ -5,6 +5,10 @@ export default class Earthling{
   }
 
   howOldOnPlanet(planetObject){
-    
+    const daysInEarthYear = 365;
+    const earthDaysInPlanetYear = planetObject.earthDaysPerYear;
+    const ageOnEarth = this.age;
+    const ageOnPlanet = Math.floor((daysInEarthYear / earthDaysInPlanetYear) * ageOnEarth);
+    return ageOnPlanet;
   }
 }
