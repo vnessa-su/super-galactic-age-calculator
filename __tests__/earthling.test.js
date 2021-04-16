@@ -34,8 +34,13 @@ describe('Earthling constructor and methods', () =>{
   });
 
   it('should return the next date of Earthling birthday on a planet', () => {
+    jest
+    .spyOn(global.Date, 'now')
+    .mockImplementationOnce(() =>
+      new Date(1618605210344).valueOf()
+    );
     const jupiter = new Planet("Jupiter", 4333);
     const nextBirthdayOnJupiter = earthlingObject.nextBirthdayOnPlanet(jupiter);
-    expect(nextBirthdayOnJupiter)
-  })
+    expect(nextBirthdayOnJupiter).toEqual("2032-12-03");
+  });
 });

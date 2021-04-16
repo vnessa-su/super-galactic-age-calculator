@@ -30,6 +30,10 @@ export default class Earthling{
     }
     return yearsLeftOnPlanet;
   }
+
+  nextBirthdayOnPlanet(planetObject){
+
+  }
 }
 
 function calculateAge(birthday){
