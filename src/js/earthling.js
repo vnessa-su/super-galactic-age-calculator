@@ -3,4 +3,8 @@ export default class Earthling{
     this.age = age;
     this.lifeExpectancy = 73;
   }
+
+  howOldOnPlanet(planetObject){
+    
+  }
 }
