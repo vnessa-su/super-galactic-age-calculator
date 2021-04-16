@@ -11,4 +11,9 @@ describe('Planet constructor and methods', () => {
     expect(planetObject.earthDaysPerYear).toEqual(88);
     expect(planetObject.earthYearsPerYear).toEqual(4.15);
   });
+
+  it('should return the number of Earth years per year on the planet to two decimal points', () => {
+    const earthYearsPerPlanetYear = planetObject.getEarthYearsPerYear();
+    expect(earthYearsPerPlanetYear).toEqual(4.15);
+  })
 });

@@ -4,4 +4,8 @@ export default class Planet{
     this.earthDaysPerYear = earthDaysPerYear;
     this.earthYearsPerYear = Number((365 / earthDaysPerYear).toFixed(2));
   }
+
+  getEarthYearsPerYear(){
+    
+  }
 }
