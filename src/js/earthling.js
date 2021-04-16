@@ -12,6 +12,10 @@ export default class Earthling{
     }
   }
 
+  getEarthAge(){
+    
+  }
+
   howOldOnPlanet(planetObject){
     const earthYearsInPlanetYear = planetObject.earthYearsPerYear;
     const ageOnEarth = this.age;
