@@ -48,10 +48,10 @@ describe('Earthling constructor and methods', () =>{
   });
 
   it('should return a negative number of the number of years past life expectancy on a planet if Earthling is aged above life expectancy', () => {
-    jest.spyOn(earthlingObject, 'getEarthAge').mockReturnValue(100);
+    const olderThanLifeExpectancyEarthling = new Earthling("1920-10-20", "other");
     const mars = new Planet("Mars", 687);
-    const howManyYearsLeftOnMars = earthlingObject.howManyYearsLeftOnPlanet(mars);
-    expect(howManyYearsLeftOnMars).toEqual(-13);
+    const howManyYearsLeftOnMars = olderThanLifeExpectancyEarthling.howManyYearsLeftOnPlanet(mars);
+    expect(howManyYearsLeftOnMars).toEqual(-14);
   });
 
   it('should return the next date of Earthling birthday on a planet', () => {
