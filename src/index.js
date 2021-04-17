@@ -14,14 +14,15 @@ $(document).ready(function(){
     const planet = $("#planetSelect").val();
     const planetObject = planetMap.get(planet);
     console.log(planetObject);
-    if(birthday){
+    if(birthday && planet){
       $("#inputBirthdayWarning").addClass("d-none");
+      $("#inputPlanetWarning").addClass("d-none");
       let earthlingObject = new Earthling(birthday, gender);
       displayBirthdayOnPlanet(earthlingObject, planetObject);
     } else {
       $("#inputBirthdayWarning").removeClass("d-none");
+      $("#inputPlanetWarning").removeClass("d-none");
     }
-
   });
 });
 
