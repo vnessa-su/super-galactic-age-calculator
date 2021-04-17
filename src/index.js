@@ -30,6 +30,12 @@ $(document).ready(function(){
     }
   });
 
+  $("#resetFormButton").on("click", function(){
+    $("#birthdayInput").val("").toChange();
+    $("#genderSelect").prop('selectedIndex', 0);
+    $("#planetSelect").prop('selectedIndex', 0);
+  });
+
   $("#goBackButton").on("click", function(){
     $("#displayContainer").addClass("d-none");
     $("#userInputForm").removeClass("d-none");
