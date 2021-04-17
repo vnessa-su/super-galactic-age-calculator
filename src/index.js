@@ -42,8 +42,12 @@ function displayBirthdayOnPlanet(earthlingObject, planetObject){
   const planetName = planetObject.name;
   const ageOnPlanet = earthlingObject.howOldOnPlanet(planetObject);
   const nextBirthdayOnPlanet = earthlingObject.nextBirthdayOnPlanet(planetObject);
-  const displayString = 
-  `<p>You are ${ageOnPlanet} years old on ${planetName}!<br>
-  Your next birthday will on ${nextBirthdayOnPlanet.toDateString()}</p>`;
+  let displayString;
+  if(ageOnPlanet === 0){
+    displayString = `<p>You are less than a year old on ${planetName}!<br>`;
+  } else {
+    displayString = `<p>You are ${ageOnPlanet} years old on ${planetName}!<br>`;
+  }
+  displayString += `Your next birthday will on ${nextBirthdayOnPlanet.toDateString()}</p>`;
   $(".display-results").html(displayString);
 }
