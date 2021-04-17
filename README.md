@@ -8,6 +8,20 @@
 
 Based on the birthday and gender input by the user, their age and life expectancy are determined. Then based on the selection of planet, the app will return the current age of the user on that planet and the date of their next birthday on that planet. It will also return the estimated years left to live on that planet based on life expectancy on Earth or how many years above life expectancy they've lived if they have already exceeded their projected life expectancy.
 
+#### To see my live website go to [https://vnessa-su.github.io/super-galactic-age-calculator/](https://vnessa-su.github.io/super-galactic-age-calculator/)
+
+## User Story
+
+* Enter in a birth date
+* Optionally select a gender
+* Select a Planet
+* Press the Calculate button to go to results display
+* See results of age on the selected planet and date of next planet birthday
+* See results of years left to live on the select planet if gender was selected
+* Press Go Back button to return to form
+* Repeat with other planets selected
+* Press Reset Form button to clear form
+
 ## Technologies Used
 
 * HTML

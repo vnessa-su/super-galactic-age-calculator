@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Zen+Dots&display=swap" rel="stylesheet">
 
   <title>Super Galactic Age Calculator</title>
-  <link rel="icon" href="./assets/images/favicon.ico">
+  <link rel="icon" href="./favicon.ico">
 </head>
 <body class="page-background">
   <h1 class="text-center p-4 page-header">Super Galactic Age Calculator</h1>
@@ -20,6 +20,7 @@
         <input class="form-control" type="date" id="birthdayInput">
         <p id="inputBirthdayWarning" class="text-danger px-3 my-2 d-none">Birthday Required</p>
       </div>
+      
       <div class="form-group form-inline">
         <label for="genderSelect" class="px-3 form-label">Gender</label>
         <select class="form-control" id="genderSelect">
@@ -29,6 +30,7 @@
           <option value="other">Other</option>
         </select>
       </div>
+
       <div class="form-group form-inline" id="planetContainer">
         <label for="planetSelect" class="px-3 form-label">Planet</label>
         <select class="form-control" id="planetSelect">
@@ -36,11 +38,13 @@
         </select>
         <p id="inputPlanetWarning" class="text-danger px-3 my-2 d-none">Planet Selection Required</p>
       </div>
+
       <div class="inline">
         <button type="submit" class="btn btn-primary ml-5 my-2">Calculate</button>
         <button type="button" class="btn btn-primary ml-5 my-2" id="resetFormButton">Reset Form</button>
       </div>
     </form>
+
     <div id="displayContainer" class="d-none text-center">
       <span class="display-results"></span>
       <button type="button" class="btn btn-primary" id="goBackButton">Go Back</button>

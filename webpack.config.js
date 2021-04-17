@@ -18,12 +18,13 @@ module.exports = {
       title: 'Super Galactic Age Calculator',
       template: './src/index.html',
       inject: 'body',
+      favicon: './assets/images/favicon.ico'
     })
   ],
   module: {
     rules: [
       {
-        test: /\.(gif|png|jpe?g|ico)$/,
+        test: /\.(gif|png|jpe?g)$/,
         use: [
           {
             loader: 'file-loader',
