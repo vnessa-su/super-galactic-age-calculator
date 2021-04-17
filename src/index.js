@@ -53,7 +53,7 @@ function populatePlanets(){
     planetMap.set(element, planetObject);
     $("#planetSelect").append(htmlString);
   });
-  
+
   return planetMap;
 }
 

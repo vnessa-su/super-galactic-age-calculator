@@ -17,13 +17,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Super Galactic Age Calculator',
       template: './src/index.html',
-      inject: 'body'
+      inject: 'body',
     })
   ],
   module: {
     rules: [
       {
-        test: /\.(gif|png|jpe?g)$/,
+        test: /\.(gif|png|jpe?g|ico)$/,
         use: [
           {
             loader: 'file-loader',
