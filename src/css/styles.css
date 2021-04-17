@@ -3,9 +3,21 @@
   background-size: cover;
 }
 
+.page-header {
+  color: lightcyan;
+  font-family: 'Zen Dots', cursive;
+}
+
+.form-label{
+  min-width: 150px;
+}
+
 .content-container {
+  font-family: 'Montserrat', sans-serif;
   background-color: rgba(255, 255, 255, 0.8);
   margin-left: 10px;
   margin-top: 10px;
   padding: 30px;
+  max-width: 700px;
+  min-height: 310px;
 }
