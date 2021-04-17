@@ -19,6 +19,9 @@ $(document).ready(function(){
       $("#inputPlanetWarning").addClass("d-none");
       let earthlingObject = new Earthling(birthday, gender);
       displayBirthdayOnPlanet(earthlingObject, planetObject);
+      if(gender){ 
+        displayLifeExpectancyOnPlanet(earthlingObject, planetObject); 
+      }
     } else {
       $("#inputBirthdayWarning").removeClass("d-none");
       $("#inputPlanetWarning").removeClass("d-none");
@@ -49,6 +52,23 @@ function displayBirthdayOnPlanet(earthlingObject, planetObject){
   } else {
     displayString = `<p>You are ${ageOnPlanet} years old on ${planetName}!<br>`;
   }
-  displayString += `Your next birthday will on ${nextBirthdayOnPlanet.toDateString()}</p>`;
+  displayString += `Next Birthday: ${nextBirthdayOnPlanet.toDateString()}</p>`;
   $(".display-results").html(displayString);
+}
+
+function displayLifeExpectancyOnPlanet(earthlingObject, planetObject){
+  const planetName = planetObject.name;
+  const lifeExpectancyOnEarth = earthlingObject.getLifeExpectancy();
+  const yearsLeftOnPlanet = earthlingObject.howManyYearsLeftOnPlanet(planetObject);
+  let displayString = `<p>Based on your life expectancy of ${lifeExpectancyOnEarth} years on Earth, `;
+  if(yearsLeftOnPlanet < 0){
+    displayString += `you've outlived your life expectancy on ${planetName} by ${yearsLeftOnPlanet * -1} years!</p>`;
+  } else if(yearsLeftOnPlanet === 0){
+    displayString += `you have less than a year left of your life on planet ${planetName}...</p>`;
+  } else if(yearsLeftOnPlanet === 1){
+    displayString += `you have around 1 year left of your life on planet ${planetName}...</p>`;
+  } else {
+    displayString += `you have around ${yearsLeftOnPlanet} years left of your life on planet ${planetName}...</p>`;
+  }
+  $(".display-results").append(displayString);
 }
