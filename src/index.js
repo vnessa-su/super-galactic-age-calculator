@@ -7,7 +7,7 @@ import Planet from './js/planet.js';
 
 $(document).ready(function(){
   const planetMap = populatePlanets();
-  $("#userInputForm").submit(function(event){
+  $("#userInputForm").on("submit", function(event){
     event.preventDefault();
     const birthday = $("#birthdayInput").val();
     const gender = $("#genderSelect").val();
@@ -22,10 +22,17 @@ $(document).ready(function(){
       if(gender){ 
         displayLifeExpectancyOnPlanet(earthlingObject, planetObject); 
       }
+      $("#userInputForm").addClass("d-none");
+      $("#displayContainer").removeClass("d-none");
     } else {
       $("#inputBirthdayWarning").removeClass("d-none");
       $("#inputPlanetWarning").removeClass("d-none");
     }
+  });
+
+  $("#goBackButton").on("click", function(){
+    $("#displayContainer").addClass("d-none");
+    $("#userInputForm").removeClass("d-none");
   });
 });
 
