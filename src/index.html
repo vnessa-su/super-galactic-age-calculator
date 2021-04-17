@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/scripts.js"></script>
+
+  <title>Super Galactic Age Calculator</title>
+</head>
+<body class="page-background">
+  <h1 class="text-center p-4">Super Galactic Age Calculator</h1>
+  <div class="container">
+    <form id="userInputForm">
+      <div class="form-group form-inline row">
+        <label for="birthdayInput" class="px-3 col-2">Birthday</label>
+        <input class="form-control" type="date" id="birthdayInput">
+      </div>
+      <div class="form-group form-inline row">
+        <label for="genderSelect" class="px-3 col-2">Gender</label>
+        <select class="form-control" id="genderSelect">
+          <option value="" selected disabled>Select Gender for Life Expectancy Calculations</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div id="planetSelect"></div>
+      <button type="submit" class="btn btn-primary mx-5 my-2">Calculate</button>
+    </form>
+    <hr>
+    <div class="display-results"></div>
+  </div>
+</body>
+</html>
