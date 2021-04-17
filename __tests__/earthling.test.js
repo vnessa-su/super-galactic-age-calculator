@@ -9,7 +9,7 @@ describe('Earthling constructor and methods', () =>{
   });
   
   it('should create an Earthling object with age, gender, and life expectancy attributes', () => {
-    expect(earthlingObject.birthday).toEqual(new Date("1995-07-09"));
+    expect(earthlingObject.birthday).toEqual(new Date("1995-07-09 00:00:00"));
     expect(earthlingObject.gender).toEqual("female");
   });
 

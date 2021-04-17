@@ -1,6 +1,6 @@
 export default class Earthling{
   constructor(birthday, gender){
-    this.birthday = new Date(birthday);
+    this.birthday = new Date(birthday+" 00:00:00");
     this.gender = gender;
   }
   
