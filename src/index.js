@@ -31,9 +31,9 @@ $(document).ready(function(){
   });
 
   $("#resetFormButton").on("click", function(){
-    $("#birthdayInput").val("").toChange();
-    $("#genderSelect").prop('selectedIndex', 0);
-    $("#planetSelect").prop('selectedIndex', 0);
+    $("#birthdayInput").val("");
+    $("#genderSelect").val("");
+    $("#planetSelect").val("");
   });
 
   $("#goBackButton").on("click", function(){
