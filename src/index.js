@@ -27,7 +27,12 @@ $(document).ready(function(){
     event.preventDefault();
     const birthday = $("#birthdayInput").val();
     const gender = $("#genderSelect").val();
-    earthlingObject = new Earthling(birthday, gender);
-    $(".display-results").text(earthlingObject.birthday.toDateString() + " " + earthlingObject.gender);
+    if(birthday){
+      $("#inputBirthdayWarning").addClass("d-none");
+      earthlingObject = new Earthling(birthday, gender);
+      $(".display-results").text(earthlingObject.birthday.toDateString() + " " + earthlingObject.gender);
+    } else {
+      $("#inputBirthdayWarning").removeClass("d-none");
+    }
   });
 });
