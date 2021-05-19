@@ -28,6 +28,7 @@ Based on the birthday and gender input by the user, their age and life expectanc
 * CSS
 * JavaScript
 * Node
+* Jest
 * VSCode
 
 ## Setup/Installation Requirements
